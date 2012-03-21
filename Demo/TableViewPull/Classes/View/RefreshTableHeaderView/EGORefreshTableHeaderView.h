@@ -50,9 +50,9 @@ typedef enum{
 @property(nonatomic,assign) id <EGORefreshTableHeaderDelegate> delegate;
 
 - (void)refreshLastUpdatedDate;
-- (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView;
-- (void)egoRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView;
-- (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView;
+- (void)egoRefreshScrollViewDidScroll:(UIScrollView *)scrollView withInitialInset:(CGFloat)inset;
+- (void)egoRefreshScrollViewDidEndDragging:(UIScrollView *)scrollView withInitialInset:(CGFloat)inset;
+- (void)egoRefreshScrollViewDataSourceDidFinishedLoading:(UIScrollView *)scrollView withInitialInset:(CGFloat)inset;
 
 @end
 @protocol EGORefreshTableHeaderDelegate

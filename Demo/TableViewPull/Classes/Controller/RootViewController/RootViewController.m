@@ -99,7 +99,7 @@
 	
 	//  model should call this when its done loading
 	_reloading = NO;
-	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView];
+	[_refreshHeaderView egoRefreshScrollViewDataSourceDidFinishedLoading:self.tableView withInitialInset:0.0f];
 	
 }
 
@@ -109,13 +109,13 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{	
 	
-	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView];
+	[_refreshHeaderView egoRefreshScrollViewDidScroll:scrollView withInitialInset:0.0f];
 		
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-	
-	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+    
+	[_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView withInitialInset:0.0f];
 	
 }
 
